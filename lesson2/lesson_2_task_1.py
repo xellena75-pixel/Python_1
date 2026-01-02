@@ -1,3 +1,4 @@
 lst = ['🍇', '🍑', '🍐', '🍊', '🍌', '🍎']
-print("Первый элемент:", lst[0])
-print("Последний элемент:", lst[-1])
+first_element = lst[0]
+last_element = lst[-1]
+print(first_element, last_element)
