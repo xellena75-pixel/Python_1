@@ -19,7 +19,7 @@ def driver():
     driver.maximize_window()
     yield driver
 
-    #driver.quit()
+    driver.quit()
 
 
 def test_sauce_demo_shop(driver):

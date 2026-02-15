@@ -15,12 +15,12 @@ def driver():
     driver.maximize_window()
     yield driver
 
-   # driver.quit()
+    driver.quit()
 
 
 def test_slow_calculator(driver):
 
-    driver.get(" https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
+    driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
 
 
     delay_input = driver.find_element(By.CSS_SELECTOR, "#delay")
