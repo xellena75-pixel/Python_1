@@ -16,6 +16,7 @@ class LoginPage:
         self.driver.find_element(By.ID, "login-button").click()
 
 class MainShopPage:
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -29,6 +30,7 @@ class MainShopPage:
         self.driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
 
 class CartPage:
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -36,6 +38,7 @@ class CartPage:
         self.driver.find_element(By.ID, "checkout").click()
 
 class CheckoutPage:
+
     def __init__(self, driver):
         self.driver = driver
 

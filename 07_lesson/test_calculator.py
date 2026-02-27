@@ -7,7 +7,8 @@ from calculator_page import CalculatorPage
 
 def test_slow_calculator():
     # Настройка драйвера Chrome
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service)
     driver.maximize_window()
 
     calc = CalculatorPage(driver)
@@ -24,9 +25,12 @@ def test_slow_calculator():
 
         # Проверка результата
         result = calc.get_result()
-        assert result == "15", f"Ожидался результат 15, но получен {result}"
+        expected = "15"
+        error_message = f"Ожидался результат {expected}, но получен {result}"
+        assert result == expected, error_message
 
     finally:
-        # закрытие браузера
+        # Закрытие браузера
         driver.quit()
+
 

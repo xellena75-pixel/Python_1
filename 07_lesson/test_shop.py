@@ -1,4 +1,3 @@
-import pytest
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
@@ -45,4 +44,5 @@ def test_saucedemo_purchase():
     finally:
         # Закрытие браузера
         driver.quit()
+
 
